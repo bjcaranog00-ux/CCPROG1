@@ -1,0 +1,70 @@
+# CCPROG1
+CCPROG1 , 11/13/26
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    string password;
+    int total;
+    double average;
+
+    // STUDENT LOGIN
+    cout << "********************************" << endl;
+    cout << "          STUDENT LOGIN" << endl;
+    cout << "********************************" << endl;
+
+    cout << "Enter Password: ";
+    cin >> password;
+
+    while (password != "Bjcaranog") {
+        cout << "\nIncorrect Password!" << endl;
+        cout << "Please try again: ";
+        cin >> password;
+    }
+
+    cout << "\nLogin Successful!" << endl;
+
+    // STUDENT GRADE REPORT
+    cout << "\n********************************" << endl;
+    cout << "       STUDENT GRADE REPORT" << endl;
+    cout << "********************************" << endl;
+
+    cout << "Name: Bj Caranog" << endl;
+    cout << "Year and Section: BSIT 1A" << endl;
+
+    cout << "\n********************************" << endl;
+    cout << "          SUBJECT GRADES" << endl;
+    cout << "********************************" << endl;
+
+    int programming = 85;
+    int database = 80;
+    int networking = 85;
+    int operatingSystem = 87;
+    int nstp = 88;
+
+    cout << "Programming 1       " << programming << endl;
+    cout << "Database            " << database << endl;
+    cout << "Networking          " << networking << endl;
+    cout << "Operating System    " << operatingSystem << endl;
+    cout << "NSTP                " << nstp << endl;
+
+    total = programming + database + networking
+            + operatingSystem + nstp;
+
+    average = total / 5.0;
+
+    cout << "\n--------------------------------" << endl;
+    cout << "Total: " << total << endl;
+    cout << fixed << setprecision(2);
+    cout << "Average: " << average << endl;
+
+    if (average >= 75) {
+        cout << "Overall Remarks: PASSED" << endl;
+    } else {
+        cout << "Overall Remarks: FAILED" << endl;
+    }
+
+    return 0;
+}
+
